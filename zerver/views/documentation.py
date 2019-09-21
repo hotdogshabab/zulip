@@ -204,7 +204,7 @@ def integration_doc(request: HttpRequest, integration_name: str=REQ(default=None
 
 
 def api_events_docs(request: HttpRequest) -> HttpResponse:
-    data_path = "static/generated/events_schema_checkers.json"
+    data_path = "/etc/zulip/events_schema_checkers.json"
     if not os.path.exists(data_path):  # nocoverage # temporary
         return json_error(
             # Line-wrapped to dodge linter, as this is temporary.s
